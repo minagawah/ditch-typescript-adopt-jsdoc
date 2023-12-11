@@ -1,0 +1,12 @@
+{
+  "site": {
+    "name": "ditch-typescript-adopt-jsdoc",
+    "domain": "ditch.jp"
+  },
+  "title": "ditch-typescript-adopt-jsdoc",
+  "organization": "ditch-typescript-adopt-jsdoc",
+  "title": {
+    "home": "Home",
+    "about": "About"
+  }
+}

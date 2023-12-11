@@ -1,0 +1,21 @@
+export function Result<T, E>(value?: T): Entity<T, E>;
+export type OkFunction<T, E> = (arg0: T) => Entity<T, E>;
+export type ErrFunction<T, E> = (arg0: E) => Entity<T, E>;
+export type IsErrFunction = () => boolean;
+export type IsOkFunction = () => boolean;
+export type UnwrapFunction<T, E> = () => T | null;
+export type UnwrapOrFunction<T, U> = (arg0: U) => T | U;
+export type UnwrapErrFunction<E> = () => E | null;
+export type ThrowIfErrFunction<E> = () => void;
+export type UnwrapOrThrowFunction<T, E> = () => T;
+export type Entity<T, E> = {
+    ok: OkFunction<T, E>;
+    err: ErrFunction<T, E>;
+    is_err: IsErrFunction;
+    is_ok: IsOkFunction;
+    unwrap: UnwrapFunction<T, E>;
+    unwrap_or: UnwrapOrFunction<T, any>;
+    unwrap_err: UnwrapErrFunction<E>;
+    throw_if_err: ThrowIfErrFunction<E>;
+    unwrap_or_throw: UnwrapOrThrowFunction<T, E>;
+};

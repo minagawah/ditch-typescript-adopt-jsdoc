@@ -1,0 +1,120 @@
+@import '_define.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Work Sans',
+    /*
+                  * "-apple-system" targets San Francisco
+                  * in Safari on Mac OS X and iOS, and
+                  * Neue Helvetica and Lucida Grande on older
+                  * versions of Mac OS X. It properly selects
+                  * between San Francisco Text
+                  * and San Francisco Display.
+                  */ -apple-system,
+    /* For Chrome on Mac OS X */ BlinkMacSystemFont,
+    /* Microsoft Windows and Windows Phone */ 'Segoe UI', /* Android */ 'Roboto',
+    /* KDE */ 'Oxygen', 'Ubuntu', /* Fedora */ 'Cantarell',
+    /* FirefoxOS */ 'Fira Sans', /* Android 2 */ 'Droid Sans',
+    /* MacOS 2 */ 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.05rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+em {
+  font-style: normal;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+.strong {
+  @apply px-1 font-bold;
+  /*
+  background-color: #ff0081;
+  color: #9afaff;
+  */
+  background-color: #00e929;
+  color: #02390c;
+}
+
+/*
+  margin-block-start: 0.3em;
+  margin-block-end: 0.3em;
+  h1 --> 0.67em
+  h2 --> 0.83em
+  h3 --> 1em
+ */
+h1 {
+  @apply font-bold text-3xl;
+}
+
+h2 {
+  @apply font-bold text-2xl;
+}
+
+h3 {
+  @apply font-bold text-xl;
+}
+
+h4,
+h5,
+h6 {
+  @apply font-bold;
+}
+
+p,
+li {
+  line-height: 130%;
+}
+
+p {
+  margin-block-start: 0.2em;
+  margin-block-end: 0.8em;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+.content {
+  padding: 1rem;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: #2993f1;
+  text-decoration: none;
+}
+
+.button {
+  @apply block px-5 py-2 rounded-lg cursor-pointer border-0 drop-shadow-2xl text-center font-bold text-lg bg-gray-200;
+}
+
+.input {
+  @apply px-2 py-2 rounded border border-solid border-gray-300 shadow-inner drop-shadow-2xl;
+}
+
+.carousel-root .slide {
+  width: 100vw;
+  height: 70vh;
+}
